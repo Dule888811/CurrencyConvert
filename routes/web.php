@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','App\Http\Controllers\CurrencyListController@currencyList');
+Route::get('/amount','App\Http\Controllers\CurrencyConverterController@convert')->name('convert');
+
